@@ -423,16 +423,16 @@ app.controller('jsEventDelegationController', function() {
             html: "<ol class='left-border'><li>An <code>index.html</code> has been included inside the <code>js_event_delegation</code> folder - Do not modify the included <code>index.html</code> file!</li><li>In the provided <code>script.js </code> file, create the following:</li></ol>"
         },
         'Feature Set 1 - The lonely event listener': {
-            html: "<ol class='left-border'><li>Target the #list and button with jQuery and add an .on() handler to:</li><li>Console.log() the buttons text node:<ul><li>example - $( \"#list button\" ) </li><li>console should read:<ul><li>if the first button is clicked: \"Button #1\" </li><li>if the second button is clicked: \"Button #2\" etc.</li></ul></li></ul></li></ol>"
+            html: "<ol class='left-border'><li>Directly target the buttons within <code>#list</code> and button with jQuery and add an <code>.on()</code> handler to:</li><li><code>console.log()</code> the buttons text node:<ul><li>example - <code>$( \"#list button\" )</code> </li><li>console should read:<ul><li>if the first button is clicked: \"Button #1\" </li><li>if the second button is clicked: \"Button #2\" etc.</li></ul></li></ul></li></ol>"
         },
         'Feature Set 2 - Bring a friend': {
-            html: "<ol class='left-border'><li>Create another button using jQuery DOM Creation:<ul><li>example - <code>\"&lt;li&gt;&lt;button style='margin-top: 10px'&gt;Delegated Button#5 Handler&lt;/button&gt;&lt;/li&gt;\"</code></li><li>Add the button to the #list with .append</li></ul></li><li>Now click on the the last button - Add comments to the top of your script.js file and answer the following questions:<ul><li>What do you think is going to happen? </li><li>What happened? </li><li>Why? </li></ul></li></ol>"
+            html: "<ol class='left-border'><li>After the previous feature set's code, create another button using jQuery DOM Creation:<ul><li>example - <code>\"&lt;li&gt;&lt;button style='margin-top: 10px'&gt;Delegated Button#5 Handler&lt;/button&gt;&lt;/li&gt;\"</code></li><li>Add the button to the <code>#list</code> with <code>.append()</code></li></ul></li><li>Add comments to the top of your <code>script.js</code> file and answer the following questions:<ul><li>What do you think is going to happen when you click on the last button?</li><li>What happened when you clicked on it?</li><li>Why?</li></ul></li></ol>"
         },
         "Feature Set 3 - Now it's a party!": {
-            html: "<ol class='left-border'><li>Create the following:<ul><li>Create a delegated event handler that will successfully console.log every new button added to the #list element </li></ul></li></ol>"
+            html: "<ol class='left-border'><li>Create a single delegated event handler that will successfully <code>console.log()</code> every new button added to the <code>#list</code> element</li></ol>"
         },
         'Additional Challenge': {
-            html: "<ul class='left-border'><li>Create a new button that has a unique attribute and when clicked, opens a new tab and navigates to google.com.</li><li>Create a jQuery .on() handler that contains a conditional and only fires if the element contains a certain HTML attribute. </li></ul>"
+            html: "<ul class='left-border'><li>Create a new button that has a unique attribute and when clicked, opens a new tab and navigates to <a href="google.com">google.com</a>.</li><li>Create a jQuery delegated <code>.on()</code> handler that contains a conditional and only fires if the element contains that unique HTML attribute. </li></ul>"
         },
         "Don't forget to test all of your work": {
             html: "<ul class='left-border'><li>Use the console to verify all of your work</li><li>If you are having trouble with any of the feature sets, ask for help</li></ul>"
