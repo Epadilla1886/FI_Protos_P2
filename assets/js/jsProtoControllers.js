@@ -432,7 +432,7 @@ app.controller('jsEventDelegationController', function() {
             html: "<ol class='left-border'><li>Create a single delegated event handler that will successfully <code>console.log()</code> every new button added to the <code>#list</code> element</li></ol>"
         },
         'Additional Challenge': {
-            html: "<ul class='left-border'><li>Create a new button that has a unique attribute and when clicked, opens a new tab and navigates to <a href="google.com">google.com</a>.</li><li>Create a jQuery delegated <code>.on()</code> handler that contains a conditional and only fires if the element contains that unique HTML attribute. </li></ul>"
+            html: "<ul class='left-border'><li>Create a new button that has a unique attribute and when clicked, opens a new tab and navigates to <a href=\"google.com\">google.com</a>.</li><li>Create a jQuery delegated <code>.on()</code> handler that contains a conditional and only fires if the element contains that unique HTML attribute. </li></ul>"
         },
         "Don't forget to test all of your work": {
             html: "<ul class='left-border'><li>Use the console to verify all of your work</li><li>If you are having trouble with any of the feature sets, ask for help</li></ul>"
