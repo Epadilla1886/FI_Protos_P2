@@ -32,7 +32,7 @@ app.directive("instructions", function(){
 
         },
         link: function(scope, element){
-            scope.repoName = "prototypes_C9.17";
+            scope.repoName = "prototypes_C10.17";
             scope.map = {17: false, 18: false, 90: false};
 
             $('body').on("keydown", function(e){
