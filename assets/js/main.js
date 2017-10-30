@@ -90,7 +90,7 @@ app.config(function($routeProvider, navigationProvider){
         JS: [
             {
                 title: 'JS-Form-Validation',
-                date: toTs('5/20/2018 8:00'),
+                date: toTs('5/20/2016 8:00'),
                 controller: 'jsFormValController',
                 template: 'featureSetsB.html'
             },
@@ -296,7 +296,7 @@ app.config(function($routeProvider, navigationProvider){
         Tutorials: [
             {
                 title: 'Tutorials-Dev-Tools-Mobile-View',
-                date: toTs('4/4/2018 10:00'),
+                date: toTs('4/4/2016 10:00'),
                 controller: 'dtMobileViewController',
                 template: 'tutorials.html'
             }
