@@ -26,7 +26,7 @@
     - synchronous (easier to understand)
       - <a href="https://nodejs.org/api/fs.html#fs_fs_readfilesync_file_options" target="_blank">readFileSync</a>
     - asynchronous (more modern, harder to understand)
-      - <a href="https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback" target="_blank">readFileSync</a>
+      - <a href="https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback" target="_blank">readFile</a>
       
 ## Version .7
 
