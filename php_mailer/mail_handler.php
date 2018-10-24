@@ -1,7 +1,10 @@
 <?php
 require_once('email_config.php');
-require('phpmailer/PHPMailer/PHPMailerAutoload.php');
-$mail = new PHPMailer;
+require_once('phpmailer/PHPMailer/src/Exception.php');
+require_once('phpmailer/PHPMailer/src/PHPMailer.php');
+require_once('phpmailer/PHPMailer/src/SMTP.php');
+
+$mail = new PHPMailer\PHPMailer\PHPMailer;
 $mail->SMTPDebug = 3;           // Enable verbose debug output. Change to 0 to disable debugging output.
 
 $mail->isSMTP();                // Set mailer to use SMTP.
@@ -23,8 +26,8 @@ $options = array(
 $mail->smtpConnect($options);
 $mail->From = 'example@gmail.com';  // sender's email address (shows in "From" field)
 $mail->FromName = 'Example Name';   // sender's name (shows in "From" field)
-$mail->addAddress('recipient1@example.com', 'First Recipient');  // Add a recipient
-//$mail->addAddress('ellen@example.com');                        // Name is optional
+$mail->addAddress('recipient1@example.com', 'First Recipient\'s name');  // Add a recipient (name is optional)
+//$mail->addAddress('ellen@example.com');                        // Add a second recipient
 $mail->addReplyTo('example@gmail.com');                          // Add a reply-to address
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
