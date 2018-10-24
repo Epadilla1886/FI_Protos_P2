@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		.studentRow{
+			border-bottom: 1px solid black;
+			font-size: 0;
+		}
+		.studentRow > *{
+			display: inline-block;
+			font-size: 1rem;
+			border-right: 1px solid black;
+			box-sizing: border-box;
+		}
+
+		.studentRow:nth-child(odd){
+			background-color: lightgrey;
+		}
+		.studentName{
+			width: 45%;
+			font-weight: bold;
+		}
+		.studentCourse{
+			width: 45%;
+		}
+		.studentGrade{
+			width: 10%;
+		}
+		.studentRow:last-of-type{
+			border-bottom: 3px solid black;
+		}
+		.gradeAverage{
+			background-color: black;
+			color: white;
+			padding: 5%;
+			display: inline;
+			padding-top: 0%;
+		}
+	</style>
+</head>
+<body>
+Make this file output the same thing as phpintro_source.php
+</body>
+</html>
