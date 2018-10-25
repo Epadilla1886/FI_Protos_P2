@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+.messageRow{
+	border-bottom: 1px solid black;
+}
+.messageRow{
+	display: flex;
+}
+.messageRow > *{
+	border-right: 1px solid black;
+	box-sizing: border-box;
+}
+.sender{
+	width: 15%;
+	font-weight: bold;
+}
+.messageText{
+	width: 70%;
+}
+.messageTime{
+	width: 15%;
+}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+
+$(document).ready(initApp);
+
+function initApp(){
+	loadData();
+}
+
+function loadData(){
+	$.ajax({
+		url: 'server.js',
+		dataType: 'json',
+		method: 'get',
+		success: renderData,
+		error: function(){
+			alert('boom');
+		}
+	})
+}
+
+function renderData(response){
+	debugger;
+	if(response.success){
+		for(var i=0; i< response.messages.length; i++){
+			var messageContainer = $("<section>",{
+				'class': 'messageRow'
+			});
+			var messageSender = $("<div>",{
+				'class': 'sender',
+				text: response.messages[i].name
+			});
+			var messageText = $("<div>",{
+				'class': 'messageText',
+				text: response.messages[i].message,
+			});
+			var messageTime = $("<div>",{
+				'class': 'messageTime',
+				text: response.messages[i].timestamp,
+			});
+			messageContainer.append(messageSender, messageText, messageTime);
+			$("#messageDisplay").append(messageContainer);
+		}
+	}
+}
+
+	</script>
+</head>
+<body>
+<div id="messageDisplay"></div>
+</body>
+</html>
