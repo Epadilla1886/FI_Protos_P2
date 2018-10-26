@@ -73,12 +73,12 @@ for($i = 0; $i < $studentLength; $i++){
 		} else if( $grade > $gradeObj->highest){
 			$gradeObj->highest = $grade;
 		}
-		$magicStudent[] = $currentStudent;
+		$magicStudents[] = $currentStudent;
 
 	}
 }
 $gradeSum = 0;
-foreach($magicStudent as $aStudent){
+foreach($magicStudents as $aStudent){
 	echo "<section class='studentRow'>
 			<div class='studentName'>{$aStudent['name']}</div>
 			<div class='studentCourse'>{$aStudent['course']}</div>
@@ -86,7 +86,7 @@ foreach($magicStudent as $aStudent){
 		  </section>";
 	$gradeSum += intVal( $aStudent['grade'] );
 }
-$average = "class average: " . calculateAverage($gradeSum, count($magicStudent) );
+$average = "class average: " . calculateAverage($gradeSum, count($magicStudents) );
 ?>
 <div class="gradeAverage"><?=$average;?></div>
 <?php
